@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //fonction pour l'optimisation de volume d'un carton
+    function opt(pas){
+     let xmax=0;
+     let vmax=0;
+    let x=0;
+    do{
+         x=x+pas;
+        let v= 4*Math.pow(x,3)-40*Math.pow(x,2)+100*x;
+        if(v>vmax){
+            vmax=v;
+            xmax=x;
+        }
+    }while(x<=5)
+        console.log(xmax);
+        
+         }
+         // test d'optimisation
+opt(0.0001);
+</script>
+</body>
+</html>
